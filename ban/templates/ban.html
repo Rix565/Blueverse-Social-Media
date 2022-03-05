@@ -1,0 +1,29 @@
+{% load static %}{% block html %}{% if not request.META.HTTP_X_PJAX %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        {% endif %}
+        <title>You have been banned !</title>
+        <link rel="shortcut icon" type="image/png" href="{% static "img/favicon.png" %}">
+        <link rel="stylesheet" type="text/css" href="{% static "closedverse.css" %}">
+        <link id="darkness" rel="stylesheet" type="text/css" href="{% static "blueness.css" %}">
+        <script src="{% static "jslibs.js" %}"></script>
+        <script src="{% static "closedverse.js" %}"></script>
+    </head>
+
+    <body class="" {% if request.user.is_authenticated %}sess-usern="{{ request.user.username }}"{% endif %}>
+        <div id="wrapper">
+            <div id="sub-body">
+                <div class="warning-content warning-content-restricted track-error" data-track-error="restricted">
+                    <div>
+                        <img src="{% static "img/restricted.png" %}">
+                        <h2>Well played. You got banned from a private clone!</h2>
+                        <p>Didn't even expect that from you.</p>
+                        <i>i'm disappointed of you & your behavior.</i>
+                    </div>
+            </div>
+        </div>
+    </body>
+</html>
+{% endblock html %}

@@ -1,0 +1,14 @@
+{% extends "closedverse_main/layout.html" %}
+{% block main-body %}{% load closedverse_user %}
+{% user_sidebar request user user.profile 0 True %}
+<div class="main-column" id="help">
+<div class="post-list-outline">
+    <h2 class="label">Contact the team behind this</h2>
+    <div id="guide" class="help-content">
+      <div class="faq">
+        <p>You can contact us using this e-mail address: <a href="mailto:{{ email }}">{{ email }}</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

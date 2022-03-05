@@ -1,0 +1,27 @@
+{% extends "closedverse_main/layout.html" %}
+{% block main-body %}{% load closedverse_user %}
+{% user_sidebar request user user.profile 0 True %}
+<div class="main-column" id="help">
+<div class="post-list-outline">
+    <h2 class="label">Frequently Asked Questions (FAQ)</h2>
+    <div id="guide" class="help-content">
+      <div class="faq">
+        <p>Hey there! If you have any questions about Blueverse, this page aims to answer them.</p>
+
+		<h2>Blueverse? What's this?</h2>
+		<p>Read the memo on the homepage.</p>
+		<h2>It is secure?</h2>
+		<p>Absolutely! It's devired from Closedverse, with all security features like CSRF tokens, no SQL injections, and more!</p>
+		<h2>It is bad?</h2>
+		<p>Only <strong>you</strong> can judge.</p>
+		<h2>I'm thinking of an improvement/function, but how can I send to the staff my suggestion?</h2>
+		<p>You have 2 choices:</p>
+		<ul>
+		    <li>Use the feedback button on the menu at the header.</li>
+		    <li>Go to the Feature Request Community and suggest your idea in a post.</li>
+		</ul>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}--
